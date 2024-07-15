@@ -70,14 +70,12 @@ The main goal of my website is provide a Personal Website
 <!-- The following are just sample -->
 - MultiPage Website
 <!-- - Responsive Website -->
-### WakaTime
-
-
-## Language
 
 
 
-## Coding
+## HTML
+
+<a href="https://wakatime.com/badge/github/VianTibay/WD-Finals"><img src="https://wakatime.com/badge/github/VianTibay/WD-Finals.svg" alt="wakatime"></a>
 
 
 
