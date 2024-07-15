@@ -73,13 +73,13 @@ The main goal of my website is provide a Personal Website
 
 
 
-## HTML
+## Waka-Time
 
 <a href="https://wakatime.com/badge/github/VianTibay/WD-Finals"><img src="https://wakatime.com/badge/github/VianTibay/WD-Finals.svg" alt="wakatime"></a>
 
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@018eedb5-8832-489e-b74e-e7150599221a/f316648e-e2ad-44cf-a622-2fbf93fe046a.png" /></a>
 
-
-
+<a href="https://wakatime.com"><img src="https://wakatime.com/share/@018eedb5-8832-489e-b74e-e7150599221a/081a43d6-679d-4099-aff7-b8b3b1984481.png" /></a>
 ### Technology
 <!-- TODO: List of Technology Used -->
 ![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
