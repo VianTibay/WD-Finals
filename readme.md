@@ -69,6 +69,18 @@ The main goal of my website is provide a Personal Website
 <!-- TODO: List of Key Components -->
 <!-- The following are just sample -->
 - MultiPage Website
+<!-- - Responsive Website -->
+### WakaTime
+
+
+## Language
+
+
+
+## Coding
+
+
+
 
 ### Technology
 <!-- TODO: List of Technology Used -->

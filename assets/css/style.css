@@ -18,7 +18,7 @@ font-weight: bold;
 color: darkgoldenrod;
    }
    .menu{
-    /* display: none; */
+    display: none;
     font-size: 2rem;
     cursor: pointer;
    }
@@ -239,10 +239,11 @@ body{
         .menu{
             display: block;
             color: green;
+            position: sticky;
         }
         .link{
             display: none;
-            flex-direction: column;
+            flex-direction: row;
             position: absolute;
             top: 60px;
             left: 0;

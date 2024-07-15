@@ -1,0 +1,319 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../../../assets/img/bg.gif");
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+  z-index: 10; /* Ensure header is on top */
+  position: relative;
+  pointer-events: none; /* Make the header itself non-interactive */
+
+  .menu, .link {
+      pointer-events: auto; /* Make menu and links interactive */
+  }
+
+  .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: darkgoldenrod;
+  }
+
+  .menu {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+  }
+  
+
+  .link {
+      display: flex;
+      gap: 10px;
+      list-style: none;
+
+      li {
+          font-size: 1.5rem;
+          position: relative;
+
+          a {
+              border-radius: 1px 5px 3px;
+              padding: 0.5rem;
+              color: darkgoldenrod;
+              transition: 0.1s ease-in-out;
+              position: relative;
+              text-decoration: none;
+
+              &:hover {
+                  color: whitesmoke;
+              }
+
+              &::before {
+                  content: '';
+                  position: absolute;
+                  left: 0;
+                  bottom: -2px;
+                  width: 100%;
+                  height: 2px;
+                  background-color: darkgoldenrod;
+                  transform: scaleX(0);
+                  transition: transform 0.3s ease-in-out;
+              }
+
+              &:hover::before {
+                  transform: scaleX(1);
+              }
+          }
+      }
+  }
+
+  
+}
+
+.head {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  top: -1rem;
+
+  h2 {
+      letter-spacing: 1px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: darkorange;
+  }
+
+  &::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      left: 34.9rem;
+      background-color: rgb(232, 232, 23);
+      width: 0;
+      height: 7%;
+      z-index: -1;
+      transition: all 1s ease-in-out;
+  }
+
+  &:hover::before {
+      width: 16.1%;
+      background-color: darkred;
+  }
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: auto;
+  background-color: rgb(18, 17, 17);
+  position: relative;
+  justify-content: center;
+  padding: 3rem;
+  z-index: 0;
+
+  .box {
+      flex: 1;
+      margin: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(235, 229, 229, 0.84);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      &:hover {
+          transform: scale(1.0);
+          box-shadow: 0 4px 8px 3px rgba(142, 106, 106, 0.422);
+      }
+
+      .arrow {
+          margin-top: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 10px;
+          width: 100%;
+          color: #007bff;
+          font-weight: bold;
+          cursor: pointer;
+          position: relative;
+          transition: all 0.3s ease-in-out;
+          font-size: 35px;
+          z-index: 100;
+          flex-direction: column;
+
+          .arrows {
+              transition: all 0.1s ease-in-out;
+              color: whitesmoke;
+              position: relative;
+              z-index: 100;
+
+              &:hover {
+                  opacity: 100%;
+                  transform: scale(1.5) translateX(10px);
+              }
+
+              &:active {
+                  transition: all 1s ease-in-out;
+                  color: darkred;
+              }
+          }
+      }
+
+      img {
+          width: 100%;
+          height: auto;
+          border: 1px solid black;
+          transition: all 0.1s ease-out;
+
+          &:hover {
+              transform: scale(1.1);
+          }
+      }
+
+      .content {
+          padding: 2rem;
+          color: whitesmoke;
+
+          h1 {
+              letter-spacing: 4px;
+          }
+
+          p {
+              margin: 2rem;
+          }
+      }
+  }
+}
+.reveal {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+a {
+  text-decoration: none;
+}
+@media only screen and (min-width:1200px) {
+  /* laptop */
+  .head{
+    &::before{
+      left: 38.9rem;
+    }
+    &:hover::before{
+      width: 16%;
+    }
+  }
+  
+}
+@media  only screen  and (max-width: 80px) {
+  .head{
+    top: -1rem;
+    &::before{
+      left: 4.9rem;
+    }
+    &:hover::before{
+      width: 53.9%;
+    }
+  }
+}
+@media only screen and (min-width:890px) and (max-width: 1200px) {
+  /* laptop */
+  .head{
+    &::before{
+      left: 26.9rem;
+    }
+    &:hover::before{
+      width: 20%;
+    }
+  }
+}
+@media  (max-width: 980px) {
+  .header{
+   position: sticky;
+   top: 0;
+      .menu{
+          display: block;
+          color: rgb(11, 185, 11);
+       
+      }
+      .link{
+     
+        display: block;
+      gap: 0;
+        list-style: none;
+        transition: height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        overflow: hidden;
+        height: 0;
+        opacity: 0;
+        flex-direction: column;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        text-align: center;
+        z-index: 100;
+      
+        
+      }
+      .link.active{  
+        display: flex;
+        height: 310px; 
+        z-index: -1;
+        opacity: 1;
+       
+      
+      }
+     .link li{
+          padding: 15px 0;
+          a{
+              font-size: 1.5rem;
+          }
+      }
+
+  }
+
+    .head{
+      top: -1rem;
+      &::before{
+        left: auto;
+      }
+      &:hover::before{
+        width: 50.9%;
+      }
+    }
+    .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .box {
+        flex: 1 1 100%;
+        margin: 1rem 0;
+    }
+
+    .content {
+        padding: 1rem;
+    }
+
+    .arrow {
+        font-size: 2rem;
+    }
+ 
+  }
